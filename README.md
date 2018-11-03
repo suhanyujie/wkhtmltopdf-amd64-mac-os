@@ -14,4 +14,23 @@
 用于存放mac版本的，便于其他人使用composer安装wkhtmltopdf的mac版本
 
 ## 安装
-* git clone 
+* 它的系统架构是amd64
+* `git clone https://github.com/suhanyujie/wkhtmltopdf-amd64-mac-os.git`
+* 或者使用composer进行安装 `composer require suhanyu/wkhtmltopdf-amd64-mac-os`
+* 安装后，laravel的使用路径：`base_path('vendor/suhanyu/wkhtmltopdf-amd64-mac-os/bin/wkhtmltopdf')`
+* 到项目根目录下，给可执行权限
+
+```html
+chmod +x vendor/suhanyu/wkhtmltopdf-amd64-mac-os/bin/wkhtmlto*
+```
+
+## 使用
+
+```html
+$snappyPdf = new \Knp\Snappy\Pdf(base_path('vendor/suhanyu/wkhtmltopdf-amd64-mac-os/bin/wkhtmltopdf'));
+$snappyPdf->generateFromHtml('<h1>test html</h1>', 'output.pdf');
+```
+
+## 参考
+* https://github.com/barryvdh/laravel-snappy
+
