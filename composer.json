@@ -1,0 +1,11 @@
+{
+    "name": "suhanyu/wkhtmltopdf-amd64-mac-os",
+    "description": "wkhtmltopdf的Mac版可执行文件",
+    "authors": [
+        {
+            "name": "suhanyujie",
+            "email": "suhanyujie@qq.com"
+        }
+    ],
+    "require": {}
+}
