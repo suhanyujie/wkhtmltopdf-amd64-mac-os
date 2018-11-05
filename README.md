@@ -16,7 +16,7 @@
 ## 安装
 * 它的系统架构是amd64
 * `git clone https://github.com/suhanyujie/wkhtmltopdf-amd64-mac-os.git`
-* 或者使用composer进行安装 `composer require suhanyu/wkhtmltopdf-amd64-mac-os`
+* 或者使用composer进行安装 `composer require "suhanyu/wkhtmltopdf-amd64-mac-os":"*"`
 * 安装后，laravel的使用路径：`base_path('vendor/suhanyu/wkhtmltopdf-amd64-mac-os/bin/wkhtmltopdf')`
 * 到项目根目录下，给可执行权限
 
@@ -30,6 +30,16 @@ chmod +x vendor/suhanyu/wkhtmltopdf-amd64-mac-os/bin/wkhtmlto*
 $snappyPdf = new \Knp\Snappy\Pdf(base_path('vendor/suhanyu/wkhtmltopdf-amd64-mac-os/bin/wkhtmltopdf'));
 $snappyPdf->generateFromHtml('<h1>test html</h1>', 'output.pdf');
 ```
+
+## 问题
+* composer安装时，如果提示：`but these conflict with your requirements or minimum-stability.`
+>可以在composer.json文件加上以下选项：
+
+```html
+"minimum-stability": "dev",
+"prefer-stable": true
+```
+
 
 ## 参考
 * https://github.com/barryvdh/laravel-snappy
